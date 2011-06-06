@@ -1,0 +1,19 @@
+!!! XML
+%html
+  %head
+    %title #{@title}
+    %link{:rel => 'stylesheet', :href => "#{app_root}/css/main.css", :type => 'text/css'}
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/jquery.js"}
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/main.js"}
+    :javascript
+      var app_root = "#{app_root}";
+  %body
+    %div#content
+      %h1 #{@title}
+      %div#twitter
+        %div#login
+          - unless auth?
+            %a{:href => "#{app_root}/login"} [login twitter]
+          - else
+            %a{:href => "#{app_root}/logout"} [logout]
+      %div
