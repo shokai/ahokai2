@@ -3,3 +3,7 @@ mongo_server : '127.0.0.1'
 mongo_port : 27017
 mongo_dbname : 'ahokai'
 
+twitter_key : 'api-consumer-key'
+twitter_secret : 'api-consumer-secret'
+session_domain : 'your.apphost.com'
+session_secret : '!!!!__change_this_str__!!!!'
